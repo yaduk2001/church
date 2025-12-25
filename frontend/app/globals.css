@@ -1,0 +1,478 @@
+@import "tailwindcss";
+
+/* ==========================================
+   CHURCH WEBSITE - GLOBAL STYLES
+   Beautiful, warm, and welcoming design
+   ========================================== */
+
+/* Import Google Fonts - Including Malayalam Support */
+
+
+/* ==========================================
+   CSS VARIABLES - Church Theme
+   ========================================== */
+:root {
+  /* Primary Colors - Warm and Welcoming */
+  --primary-gold: #D4AF37;
+  --primary-burgundy: #800020;
+  --primary-cream: #FFF8DC;
+  --primary-white: #FFFFFF;
+
+  /* Secondary Colors */
+  --secondary-brown: #8B4513;
+  --secondary-beige: #F5F5DC;
+  --secondary-light-gold: #FFD700;
+
+  /* Accent Colors */
+  --accent-blue: #4A90E2;
+  --accent-green: #5CB85C;
+  --accent-red: #D9534F;
+
+  /* Text Colors */
+  --text-primary: #2C2C2C;
+  --text-secondary: #666666;
+  --text-light: #999999;
+  --text-white: #FFFFFF;
+
+  /* Background Colors */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9F9F9;
+  --bg-cream: #FFF8DC;
+  --bg-light-gold: #FFF9E6;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.25);
+
+  /* Borders */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary-burgundy);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.8;
+}
+
+a {
+  color: var(--primary-burgundy);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-gold);
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-burgundy), var(--secondary-brown));
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #991b1b, #800020);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(128, 0, 32, 0.4);
+  filter: brightness(1.1);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--primary-gold), var(--secondary-light-gold));
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+  filter: brightness(1.05);
+  color: #3f2e00;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-burgundy);
+  border: 2px solid var(--primary-burgundy);
+}
+
+.btn-outline:hover {
+  background: var(--primary-burgundy);
+  color: var(--text-white);
+}
+
+/* ==========================================
+   CARDS
+   ========================================== */
+.card {
+  background: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-lg);
+  transition: var(--transition-normal);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+  border-bottom: 2px solid var(--primary-gold);
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: var(--primary-burgundy);
+  margin-bottom: 0;
+}
+
+.card-body {
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   FORMS
+   ========================================== */
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border: 2px solid #E0E0E0;
+  border-radius: var(--border-radius-md);
+  transition: var(--transition-fast);
+  background: var(--bg-primary);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+select.form-control {
+  cursor: pointer;
+}
+
+/* ==========================================
+   CONTAINERS & LAYOUT
+   ========================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-xxl) 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-gold), var(--secondary-light-gold));
+  margin: var(--spacing-sm) auto 0;
+  border-radius: 2px;
+}
+
+/* ==========================================
+   UTILITIES
+   ========================================== */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .btn {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+/* ==========================================
+   SCROLLBAR STYLING
+   ========================================== */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23800020'%3E%3Cpath d='M10 2h4v6h6v4h-6v10h-4v-10h-6v-4h6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(128, 0, 32, 0.05);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23800020'%3E%3Cpath d='M10 2h4v6h6v4h-6v10h-4v-10h-6v-4h6z'/%3E%3C/svg%3E");
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* ==========================================
+   LOADING SPINNER
+   ========================================== */
+.spinner {
+  border: 3px solid var(--bg-secondary);
+  border-top: 3px solid var(--primary-gold);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

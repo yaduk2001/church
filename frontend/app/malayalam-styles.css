@@ -1,0 +1,259 @@
+/* ==========================================
+   MALAYALAM LANGUAGE SPECIFIC STYLES
+   ========================================== */
+
+/* 
+   These styles are applied when the html lang attribute is set to 'ml'.
+   The focus is on adjusting font sizes and line heights to ensuring 
+   Malayalam text fits within the English layout geometry without breaking it.
+*/
+
+/* Hero Section Adjustments */
+html[lang="ml"] .hero-title {
+    font-size: 2rem !important;
+    /* Significantly reduced from English 3.5rem */
+    line-height: 1.2 !important;
+}
+
+html[lang="ml"] .hero-subtitle {
+    font-size: 0.95rem !important;
+    /* Reduced for better proportion */
+    line-height: 1.4 !important;
+}
+
+/* Fix for Bible Verses (church-names) in Malayalam - 2-1 Grid Layout */
+html[lang="ml"] .church-names {
+    display: grid !important;
+    /* Use grid instead of flex */
+    grid-template-columns: 1fr 1fr !important;
+    /* Two columns for top row */
+    gap: 1rem !important;
+    /* Increased gap slightly for separation */
+    width: 98% !important;
+    /* nearly full width */
+    max-width: 1600px !important;
+    /* Max constraint */
+    padding: 0 0.5rem !important;
+    /* Reduced padding */
+    margin-bottom: 2rem !important;
+    /* Proper spacing */
+    margin-left: auto !important;
+    /* Center the container */
+    margin-right: auto !important;
+    /* Center the container */
+    justify-items: center !important;
+    /* Center items horizontally in their grid cells */
+}
+
+html[lang="ml"] .church-name {
+    font-size: clamp(0.45rem, 1.1vw, 0.9rem) !important;
+    /* Adjusted scaling */
+    padding: 0.6rem 1.5rem !important;
+    /* More horizontal padding for pill look */
+    line-height: 1.5 !important;
+    width: fit-content !important;
+    /* Only as wide as the text */
+    max-width: 100% !important;
+    /* Prevent overflow */
+    white-space: nowrap !important;
+    /* Keep on one line as requested */
+    overflow: visible !important;
+    /* Show all text, prevent clipping */
+    text-align: center !important;
+    font-family: 'Manjari', sans-serif !important;
+    /* Cool font */
+    font-weight: 400 !important;
+    /* Normal weight - NOT bold */
+    border-radius: 50px !important;
+    /* Rounded pill shape for 'cooler' look */
+    background: rgba(0, 0, 0, 0.6) !important;
+    /* Ensure background is consistent */
+}
+
+/* Third verse spans both columns and centers */
+html[lang="ml"] .church-name:nth-child(3) {
+    grid-column: 1 / -1 !important;
+    /* Span both columns */
+    max-width: 90% !important;
+    /* Safety cap */
+    margin: 0 auto !important;
+    /* Center it */
+}
+
+/* 
+   Managing Committee Badge Fixes 
+   Ensures the position badge text (which is longer in Malayalam) fits 
+   within the badge pill without wrapping or overflowing.
+*/
+html[lang="ml"] .committee-pos-badge {
+    font-size: 0.6rem !important;
+    /* Reduced from 0.75rem */
+    padding: 0.4rem 0.8rem !important;
+    /* Slightly reduced padding */
+    letter-spacing: 0 !important;
+    /* Remove spacing to save space */
+    max-width: 95% !important;
+    /* Allow slightly more width */
+    white-space: nowrap !important;
+    /* Force single line */
+}
+
+/* 
+   Notification Badge Fixes 
+   "ANNOUNCEMENT" and other badges are longer in Malayalam.
+   These rules shrink the text to fit the English-designed pills.
+*/
+html[lang="ml"] .notification-type-badge {
+    font-size: 0.6rem !important;
+    /* Reduced from 0.75rem */
+    padding: 0.3rem 0.6rem !important;
+    white-space: nowrap !important;
+    letter-spacing: 0 !important;
+}
+
+/* General Text Adjustments for better readability in Malayalam */
+html[lang="ml"] body {
+    /* Malayalam fonts often need slightly more line-height */
+    line-height: 1.6;
+}
+
+/* ==========================================
+   MASS TIMINGS PAGE MALAYALAM ADJUSTMENTS
+   ========================================== */
+
+/* Page Header */
+html[lang="ml"] .page-title {
+    font-size: 2rem !important;
+    /* Reduced from 2.5rem */
+    line-height: 1.3 !important;
+}
+
+html[lang="ml"] .page-subtitle {
+    font-size: 0.9rem !important;
+}
+
+/* Filter Tabs */
+html[lang="ml"] .filter-label {
+    font-size: 0.8rem !important;
+    letter-spacing: 0 !important;
+}
+
+html[lang="ml"] .filter-input-modern,
+html[lang="ml"] .calendar-button-modern {
+    font-size: 0.9rem !important;
+    padding: 0.7rem 0.8rem !important;
+}
+
+/* Church Section Headers */
+html[lang="ml"] .church-name {
+    font-size: 1.6rem !important;
+    /* Reduced from 2rem */
+}
+
+/* Timing Cards */
+html[lang="ml"] .timing-day-modern {
+    font-size: 1rem !important;
+    /* Reduced from 1.2rem */
+    letter-spacing: 0 !important;
+}
+
+html[lang="ml"] .timing-badge-modern {
+    font-size: 0.6rem !important;
+    /* Reduced from 0.7rem */
+    padding: 0.4rem 0.6rem !important;
+    white-space: nowrap !important;
+}
+
+html[lang="ml"] .time-text {
+    font-size: 1.6rem !important;
+    /* Reduced from 2rem */
+}
+
+html[lang="ml"] .timing-description-modern {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+}
+
+html[lang="ml"] .timing-language-modern {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.8rem !important;
+}
+
+/* Info Box */
+html[lang="ml"] .info-box h3 {
+    font-size: 1.2rem !important;
+}
+
+html[lang="ml"] .info-box li {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+}
+
+/* Fix for Filter Bar in Malayalam */
+html[lang="ml"] .filters-container-modern {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    height: auto !important;
+    max-width: 900px !important;
+}
+
+html[lang="ml"] .filter-input-wrapper {
+    flex: 1 1 200px !important;
+    min-width: 180px !important;
+    max-width: 250px !important;
+}
+
+/* Fix for Latest Announcements Grid Alignment */
+html[lang="ml"] .announcements-grid {
+    justify-content: center !important;
+}
+
+/* ==========================================
+   RESPONSIVE BREAKPOINTS FOR MALAYALAM
+   ========================================== */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+    html[lang="ml"] .hero-title {
+        font-size: 1.75rem !important;
+    }
+
+    html[lang="ml"] .hero-subtitle {
+        font-size: 0.85rem !important;
+    }
+
+    html[lang="ml"] .church-name {
+        font-size: 0.6rem !important;
+        padding: 0.4rem 0.7rem !important;
+    }
+}
+
+/* Mobile devices - switch to single column */
+@media (max-width: 480px) {
+    html[lang="ml"] .hero-title {
+        font-size: 1.5rem !important;
+    }
+
+    html[lang="ml"] .hero-subtitle {
+        font-size: 0.8rem !important;
+    }
+
+    /* Switch to single column on mobile */
+    html[lang="ml"] .church-names {
+        grid-template-columns: 1fr !important;
+        padding: 0 0.5rem !important;
+        gap: 0.35rem !important;
+    }
+
+    html[lang="ml"] .church-name {
+        font-size: 0.55rem !important;
+        padding: 0.35rem 0.6rem !important;
+    }
+
+    /* Reset third verse to full width on mobile */
+    html[lang="ml"] .church-name:nth-child(3) {
+        max-width: 100% !important;
+    }
+}

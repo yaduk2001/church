@@ -1,0 +1,414 @@
+/* Thanksgiving Page Styles - Premium "Gratitude & Grace" Theme */
+
+.thanksgiving-page {
+    /* Rich background texture */
+    background-color: var(--primary-cream);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(123, 27, 2, 0.03) 0%, transparent 20%);
+    min-height: 100vh;
+    padding: 3rem 0 5rem;
+    font-family: var(--font-body);
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.page-header .cross-symbol {
+    font-size: 3rem;
+    color: var(--primary-gold);
+    margin-bottom: 0.5rem;
+    display: block;
+    opacity: 0;
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    color: var(--primary-burgundy);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+/* Grid Layout */
+.thanksgiving-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    align-items: start;
+}
+
+/* Left Column - Inspirational */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    top: 2rem;
+}
+
+/* Bible Verse Card */
+.bible-card {
+    background: linear-gradient(135deg, var(--primary-burgundy), #5a1215);
+    color: var(--primary-cream);
+    padding: 2.5rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 10px 30px rgba(88, 12, 12, 0.2);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInLeft 0.8s ease-out 0.6s forwards;
+}
+
+.bible-card::before {
+    content: '❝';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.05);
+    font-family: serif;
+    line-height: 1;
+}
+
+.verse-text {
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-family: serif;
+}
+
+.verse-ref {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Info Box - White Card with Church Icons */
+.info-box {
+    background: #ffffff;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem;
+    opacity: 0;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    animation: fadeInLeft 0.8s ease-out 0.8s forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Gold Top Border for Info Box */
+.info-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-gold);
+}
+
+.info-box h3 {
+    font-size: 1.4rem;
+    color: var(--primary-burgundy);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    letter-spacing: -0.5px;
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-box li {
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
+}
+
+.info-box li:last-child {
+    border-bottom: none;
+}
+
+.info-box li::before {
+    content: '✟';
+    /* Churchly Icon (Cross) */
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    color: var(--primary-gold);
+    font-size: 1.1rem;
+}
+
+/* Right Column - Form */
+.right-column {
+    opacity: 0;
+    animation: fadeInRight 0.8s ease-out 0.8s forwards;
+}
+
+/* Thanksgiving Form - Ultra Premium Card */
+.thanksgiving-form {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 3.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative top border */
+.thanksgiving-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-burgundy), var(--primary-gold), var(--primary-burgundy));
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-burgundy);
+    margin-bottom: 0.75rem;
+    margin-left: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.required {
+    color: var(--accent-red);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 1.1rem 1.25rem;
+    font-size: 1.05rem;
+    border: 1px solid #e2e8f0;
+    border-bottom: 3px solid #e2e8f0;
+    /* Accent styling */
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #f8fafc;
+    font-family: inherit;
+    color: var(--text-primary);
+}
+
+.form-input:hover,
+.form-textarea:hover {
+    background: #fff;
+    border-color: #cbd5e1;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    background: #fff;
+    border-color: var(--primary-gold);
+    border-bottom-color: var(--primary-burgundy);
+    box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 160px;
+    line-height: 1.6;
+}
+
+/* Character Count & Errors */
+.character-count {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-align: right;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.error-message {
+    color: var(--accent-red);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+/* Submit Button - Vibrant & Engaging */
+.submit-btn {
+    width: 100%;
+    padding: 1.25rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(135deg, #a31621 0%, #800020 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: 0 10px 20px rgba(128, 0, 32, 0.2);
+    margin-top: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px rgba(128, 0, 32, 0.3);
+    background: linear-gradient(135deg, #b01b27 0%, #900025 100%);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(128, 0, 32, 0.2);
+}
+
+.submit-btn:disabled {
+    background: #cbd5e1;
+    color: #94a3b8;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.spinner-small {
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .thanksgiving-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .left-column {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .bible-card,
+    .info-box {
+        flex: 1;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .left-column {
+        flex-direction: column;
+    }
+
+    .thanksgiving-form {
+        padding: 1.5rem;
+    }
+
+    .page-title {
+        font-size: 2.2rem;
+    }
+}

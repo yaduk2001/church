@@ -1,0 +1,121 @@
+/* About Page Styles */
+
+.about-hero {
+    background: linear-gradient(135deg, var(--primary-burgundy), var(--secondary-brown));
+    padding: 4rem 0;
+    text-align: center;
+    color: white;
+}
+
+.about-hero h1 {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    color: var(--primary-cream);
+    font-size: 1.3rem;
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* Values Grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.value-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    color: var(--primary-burgundy);
+    margin-bottom: 1rem;
+}
+
+.value-card p {
+    color: var(--text-secondary);
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    text-align: center;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.team-image {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.team-card h3 {
+    color: var(--primary-burgundy);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.team-card h4 {
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.team-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-hero p {
+        font-size: 1.1rem;
+    }
+
+    .values-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

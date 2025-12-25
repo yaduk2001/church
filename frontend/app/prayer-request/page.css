@@ -1,0 +1,304 @@
+/* ==========================================
+   PRAYER REQUEST PAGE - COMPACT DESIGN
+   ========================================== */
+
+.prayer-request-page {
+    min-height: 100vh;
+    background: #f9fafb;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.prayer-request-page .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    padding: 1.5rem 0 1rem;
+    background: linear-gradient(to bottom, #fff, #f9fafb);
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 1.5rem;
+}
+
+.cross-symbol {
+    font-size: 2rem;
+    color: var(--primary-burgundy);
+    margin-bottom: 0.25rem;
+}
+
+.page-title {
+    font-size: 1.75rem;
+    color: var(--primary-burgundy);
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+.page-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+/* Form Container - Side by Side Layout */
+.form-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+    align-items: start;
+    padding-bottom: 1.5rem;
+}
+
+/* Info Box */
+.info-box {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--primary-gold);
+    position: sticky;
+    top: 1rem;
+    height: fit-content;
+}
+
+.info-box h3 {
+    color: var(--primary-burgundy);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-box li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.info-box li:last-child {
+    border-bottom: none;
+}
+
+.info-box li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-gold);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Prayer Form */
+.prayer-form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-top: 3px solid var(--primary-burgundy);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.required {
+    color: #dc2626;
+    margin-left: 0.25rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    background: #f9fafb;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-burgundy);
+    background: white;
+    box-shadow: 0 0 0 2px rgba(128, 0, 32, 0.05);
+}
+
+.form-input.error,
+.form-textarea.error {
+    border-color: #dc2626;
+    background: #fef2f2;
+}
+
+.form-textarea {
+    resize: none;
+    min-height: 80px;
+    height: 100px;
+}
+
+.character-count {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.error-message {
+    display: block;
+    color: #dc2626;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    margin: 0.75rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    background: #f9fafb;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.checkbox-label:hover {
+    background: #f3f4f6;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--primary-burgundy);
+}
+
+.checkbox-text {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* Form Actions */
+.form-actions {
+    margin-top: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary-burgundy);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #600018;
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background: #9ca3af;
+}
+
+.spinner-small {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-left: 3px solid;
+    font-size: 0.9rem;
+}
+
+.alert-success {
+    background: #ecfdf5;
+    border-left-color: #10b981;
+    color: #065f46;
+}
+
+.alert-error {
+    background: #fef2f2;
+    border-left-color: #dc2626;
+    color: #991b1b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .page-header {
+        padding: 1rem 0;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+}

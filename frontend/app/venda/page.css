@@ -1,0 +1,431 @@
+/* ==========================================
+   VENDA (OFFERINGS) PAGE - PREMIUM DESIGN
+   ========================================== */
+
+.venda-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 4rem 0;
+}
+
+.venda-page .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.offering-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.3));
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--primary-burgundy);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Venda Content */
+.venda-content {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Info Section */
+.info-section {
+    animation: fadeInLeft 0.6s ease-out;
+}
+
+.info-section h2 {
+    color: var(--primary-burgundy);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Offering Types */
+.offering-types {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.offering-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-gold);
+}
+
+.offering-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.offering-card h3 {
+    color: var(--primary-burgundy);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.offering-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Payment Methods Info */
+.payment-methods-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.payment-methods-info h3 {
+    color: var(--primary-burgundy);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.methods-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.method-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.method-item:hover {
+    background: #f3f4f6;
+}
+
+.method-icon {
+    font-size: 1.8rem;
+}
+
+.method-item strong {
+    display: block;
+    color: var(--primary-burgundy);
+    margin-bottom: 0.25rem;
+}
+
+.method-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Tax Info */
+.tax-info {
+    background: linear-gradient(135deg, #fffbf0 0%, #fff8e1 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-gold);
+}
+
+.tax-info h3 {
+    color: var(--primary-burgundy);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.tax-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Form Section */
+.form-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    animation: fadeInRight 0.6s ease-out;
+    position: sticky;
+    top: 2rem;
+}
+
+.form-section h2 {
+    color: var(--primary-burgundy);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Offering Form */
+.offering-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.875rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #f9fafb;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Checkbox Label */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label:hover {
+    background: #f3f4f6;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-burgundy);
+}
+
+.checkbox-label span {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary-burgundy), var(--secondary-brown));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(128, 0, 32, 0.3);
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(128, 0, 32, 0.4);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.spinner-small {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* Form Note */
+.form-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    animation: slideInUp 0.4s ease-out;
+}
+
+.alert-success {
+    background: #ecfdf5;
+    border-left: 4px solid #10b981;
+    color: #065f46;
+}
+
+.alert-success p {
+    margin: 0.25rem 0;
+}
+
+.receipt-info {
+    font-size: 1.1rem;
+    margin: 0.5rem 0 !important;
+}
+
+.small-text {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.alert-error {
+    background: #fef2f2;
+    border-left: 4px solid #dc2626;
+    color: #991b1b;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .venda-content {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section {
+        position: static;
+    }
+
+    .offering-types {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .venda-page {
+        padding: 2rem 0;
+    }
+
+    .venda-page .container {
+        padding: 0 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .form-section {
+        padding: 1.5rem;
+    }
+
+    .payment-methods-info {
+        padding: 1.5rem;
+    }
+}

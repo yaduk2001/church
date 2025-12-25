@@ -1,0 +1,350 @@
+/* ==========================================
+   ADMIN PRAYER REQUESTS PAGE
+   ========================================== */
+
+.admin-prayer-requests {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Page Header */
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    color: var(--primary-burgundy);
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Loading State */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    gap: 1rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f4f6;
+    border-top-color: var(--primary-burgundy);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Filters Section */
+.filters-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.status-filters {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e5e7eb;
+    background: white;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-secondary);
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-gold);
+    background: #fffbf0;
+}
+
+.filter-btn.active {
+    background: var(--primary-burgundy);
+    color: white;
+    border-color: var(--primary-burgundy);
+}
+
+/* Requests Grid */
+.requests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Request Card */
+.request-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.request-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.request-card.status-pending {
+    border-left-color: #f59e0b;
+}
+
+.request-card.status-approved {
+    border-left-color: #10b981;
+}
+
+.request-card.status-archived {
+    border-left-color: #6b7280;
+}
+
+/* Card Header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.user-info h3 {
+    font-size: 1.1rem;
+    color: var(--primary-burgundy);
+    margin-bottom: 0.25rem;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-badge.approved {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-badge.archived {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+/* Card Body */
+.card-body {
+    padding: 1.5rem;
+}
+
+.contact-info {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.prayer-text {
+    margin-top: 1rem;
+}
+
+.prayer-text strong {
+    display: block;
+    color: var(--primary-burgundy);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.prayer-text p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Card Actions */
+.card-actions {
+    display: flex;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+}
+
+.status-select {
+    flex: 1;
+    padding: 0.5rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.status-select:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+}
+
+.btn-delete {
+    padding: 0.5rem 1rem;
+    background: #fee2e2;
+    color: #991b1b;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+    background: #fecaca;
+}
+
+.delete-confirm {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.btn-confirm,
+.btn-cancel {
+    padding: 0.4rem 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-confirm {
+    background: #dc2626;
+    color: white;
+}
+
+.btn-confirm:hover {
+    background: #b91c1c;
+}
+
+.btn-cancel {
+    background: #e5e7eb;
+    color: var(--text-primary);
+}
+
+.btn-cancel:hover {
+    background: #d1d5db;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Error Message */
+.error-message {
+    background: #fef2f2;
+    border-left: 4px solid #dc2626;
+    color: #991b1b;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-prayer-requests {
+        padding: 1rem;
+    }
+
+    .requests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-section {
+        padding: 1rem;
+    }
+
+    .status-filters {
+        flex-direction: column;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+
+    .card-actions {
+        flex-direction: column;
+    }
+
+    .status-select {
+        width: 100%;
+    }
+}

@@ -1,0 +1,242 @@
+/* Auth Pages Styles - Holy Church Theme */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@400;700&display=swap');
+
+.auth-page {
+    min-height: 100vh;
+    background-color: #f8f5f2;
+    /* Cream/Parchment background */
+    background-image:
+        radial-gradient(#e3d5b8 1px, transparent 1px),
+        /* Subtle cross pattern or just texture */
+        linear-gradient(to right, rgba(128, 0, 32, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(128, 0, 32, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px, 40px 40px, 40px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.auth-container {
+    background: #FFFAF0;
+    /* Ultra light gold/cream */
+    padding: 2.5rem 3rem;
+    border-radius: 8px;
+    /* Sharper, more classic corners */
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.05),
+        0 20px 50px rgba(128, 0, 32, 0.15),
+        inset 0 0 0 1px #E5E7EB,
+        /* Inner subtle border */
+        0 0 0 4px rgba(197, 160, 89, 0.3);
+    /* Gold outer ring */
+    width: 100%;
+    max-width: 800px;
+    /* Wider for 2 columns */
+    border-top: 5px solid #800020;
+    /* Deep Burgundy top border */
+    position: relative;
+    animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Decorative Cross Element at top center */
+.auth-container::before {
+    content: "✝";
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #800020;
+    color: #C5A059;
+    /* Gold Cross */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.auth-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #800020;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.auth-subtitle {
+    color: #8B4513;
+    /* SaddleBrown */
+    font-size: 1rem;
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* 2-Column Grid Layout for Forms */
+.auth-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+}
+
+/* Full width elements span both columns */
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Fallback for smaller login form or single column needs */
+.auth-form.single-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-size: 0.85rem;
+    color: #5D4037;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-input {
+    padding: 0.85rem 1rem;
+    border: 1px solid #D1D5DB;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Lato', sans-serif;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #C5A059;
+    /* Gold */
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+    background-color: #fff;
+}
+
+.form-input::placeholder {
+    color: #9CA3AF;
+    font-style: italic;
+}
+
+/* Button Styling */
+.btn-submit {
+    grid-column: 1 / -1;
+    /* Full width */
+    padding: 1rem;
+    background: linear-gradient(135deg, #800020 0%, #5a0016 100%);
+    color: #FDFBF7;
+    border: 1px solid #C5A059;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 6px rgba(128, 0, 32, 0.2);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(128, 0, 32, 0.3);
+    background: linear-gradient(135deg, #990026 0%, #800020 100%);
+}
+
+.btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Footer Links */
+.auth-footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(197, 160, 89, 0.3);
+    /* Subtle gold line */
+    color: #6B7280;
+    font-size: 0.95rem;
+}
+
+.auth-link {
+    color: #800020;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 0.25rem;
+    font-family: 'Cinzel', serif;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.auth-link:hover {
+    border-bottom-color: #800020;
+}
+
+.error-message {
+    grid-column: 1 / -1;
+    background: #FEF2F2;
+    color: #991B1B;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border-left: 4px solid #EF4444;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 2rem;
+    }
+
+    .auth-form {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .auth-title {
+        font-size: 2rem;
+    }
+}

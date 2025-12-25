@@ -1,0 +1,408 @@
+/* ==========================================
+   NAVBAR STYLES - Church Theme 
+   ========================================== */
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-burgundy), var(--secondary-brown));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    padding: 0;
+    width: 100%;
+    /* overflow: hidden; Removed to prevent clipping of dropdowns */
+}
+
+/* Navbar Content - Reduced Height */
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    /* Ensure full width */
+    max-width: 100%;
+    /* No max-width constraint to ensure far ends */
+    /* Remove auto margin */
+    /* overflow: hidden; Removed to allow dropdowns */
+    min-height: 80px;
+    position: relative;
+    /* Needed for absolute centering of children */
+}
+
+/* Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    padding-top: 0;
+}
+
+/* ... existing brand styles ... */
+.brand-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+}
+
+.navbar-brand .cross-icon {
+    font-size: 1.8rem;
+    color: var(--primary-gold);
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.brand-text-main {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-white);
+    line-height: 1.1;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+.brand-text-sub {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--primary-gold);
+    letter-spacing: 0.5px;
+    line-height: 1;
+    opacity: 0.95;
+    text-transform: uppercase;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.mobile-menu-toggle span {
+    width: 20px;
+    height: 2px;
+    background: var(--primary-gold);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Links (Center) */
+.navbar-center {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    justify-content: center;
+}
+
+/* Right Side Icons & Toggle */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+    /* Ensure it pushes to end if flex spacing isn't enough */
+}
+
+/* ... existing nav link styles ... */
+.nav-link {
+    padding: 0.4rem 0.75rem;
+    color: var(--primary-cream);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    border-radius: var(--border-radius-md);
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--primary-gold);
+}
+
+.nav-link.active {
+    background: rgba(212, 175, 55, 0.2);
+    color: var(--primary-gold);
+    font-weight: 600;
+}
+
+/* Dropdown */
+.nav-dropdown {
+    position: relative;
+    z-index: 10001;
+}
+
+.nav-dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.nav-dropdown .dropdown-toggle .arrow {
+    font-size: 0.6rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .dropdown-toggle .arrow {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu {
+    position: absolute;
+    min-width: 180px;
+    background: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 0.25rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100000;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+}
+
+.dropdown-item:hover {
+    background: var(--bg-light-gold);
+    color: var(--primary-burgundy);
+    padding-left: 1.25rem;
+}
+
+/* User Profile */
+.profile-dropdown {
+    position: relative;
+    z-index: 10001;
+    z-index: 10001;
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--primary-gold), var(--primary-cream));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--primary-burgundy);
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    border-color: var(--primary-gold);
+}
+
+.login-btn {
+    padding: 0.4rem 0.8rem;
+    background: transparent;
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-left: 0.25rem;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.login-btn:hover {
+    background: var(--primary-gold);
+    color: var(--primary-burgundy);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.profile-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Language Toggle Button */
+.language-toggle {
+    padding: 0.4rem 0.8rem;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid var(--primary-gold);
+    border-radius: var(--border-radius-md);
+    color: var(--primary-gold);
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Separation from menu */
+    font-family: var(--font-body);
+}
+
+.language-toggle:hover {
+    background: var(--primary-gold);
+    color: var(--primary-burgundy);
+    transform: scale(1.05);
+    box-shadow: 0 2px 6px rgba(212, 175, 55, 0.3);
+}
+
+.language-toggle:active {
+    transform: scale(0.98);
+}
+
+/* Responsive Design */
+/* Center the navigation links by pushing the first link away from the start - REMOVED since we are pushing to right manually */
+/* .navbar-menu>.nav-link:first-child {
+    margin-left: auto;
+} */
+
+/* Push the right-side group (Language + Profile) to the end */
+/* .language-toggle { margin-left: auto; } - Handled by flex layout */
+
+@media (max-width: 1024px) {
+    .navbar-content {
+        padding: 1rem;
+    }
+
+    .navbar-menu {
+        gap: 0.25rem;
+    }
+
+    .nav-link {
+        padding: 0.65rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .brand-text-main {
+        font-size: 1.1rem;
+    }
+
+    .brand-text-sub {
+        font-size: 0.75rem;
+    }
+
+    .navbar-brand .cross-icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-right {
+        gap: 0.5rem;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .navbar-center {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        transform: none;
+        /* Reset desktop centering */
+        width: 100%;
+        background: linear-gradient(135deg, var(--primary-burgundy), var(--secondary-brown));
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+    }
+
+    .navbar-center.active {
+        max-height: 600px;
+        opacity: 1;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-dropdown .dropdown-menu {
+        position: static !important;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0.2);
+        margin-top: 0.5rem;
+        display: none;
+    }
+
+    .nav-dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-item {
+        color: var(--primary-cream);
+    }
+
+    .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--primary-gold);
+    }
+
+    .profile-dropdown {
+        margin-left: 0;
+        margin-top: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-text-main {
+        font-size: 0.95rem;
+        white-space: normal;
+        /* Allow wrapping on very small screens if absolutely needed */
+    }
+
+    .navbar-brand .cross-icon {
+        font-size: 1.75rem;
+    }
+}

@@ -1,0 +1,177 @@
+/* Account Settings Page - Premium Animations & Hover Effects */
+
+/* Card Hover Effects */
+.settings-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.settings-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.settings-card:hover::before {
+    left: 100%;
+}
+
+.settings-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(128, 0, 32, 0.15), 0 8px 16px -8px rgba(0, 0, 0, 0.1);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Icon Container Animation */
+.icon-container {
+    transition: all 0.3s ease;
+}
+
+.settings-card:hover .icon-container {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 4px 12px rgba(128, 0, 32, 0.3);
+}
+
+/* Input Focus Effects */
+.admin-input {
+    transition: all 0.2s ease;
+}
+
+.admin-input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(128, 0, 32, 0.1);
+    border-color: #D4AF37 !important;
+}
+
+/* Button Pulse Animation */
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 2px 8px rgba(128, 0, 32, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 4px 16px rgba(128, 0, 32, 0.4);
+    }
+}
+
+.save-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.save-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.save-button:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.save-button:hover {
+    transform: translateY(-2px);
+    animation: pulse 2s infinite;
+}
+
+.save-button:active {
+    transform: translateY(0);
+}
+
+/* Message Alert Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert-message {
+    animation: slideIn 0.4s ease-out;
+}
+
+/* Label Hover Effect */
+.admin-label {
+    transition: color 0.2s ease;
+}
+
+.admin-form-group:hover .admin-label {
+    color: #800020;
+}
+
+/* Section Header Underline Animation */
+.section-header {
+    position: relative;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #800020, #D4AF37);
+    transition: width 0.4s ease;
+}
+
+.settings-card:hover .section-header::after {
+    width: 100%;
+}
+
+/* Smooth Page Load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.settings-container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Stagger Animation for Cards */
+.settings-card:nth-child(1) {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.settings-card:nth-child(2) {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Input Icon Animation */
+.input-icon {
+    transition: transform 0.3s ease;
+}
+
+.admin-form-group:hover .input-icon {
+    transform: scale(1.2);
+}

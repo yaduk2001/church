@@ -1,0 +1,613 @@
+/* ==========================================
+   HOME PAGE STYLES
+   ========================================== */
+
+/* Hero Section with Slideshow */
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background-color: #800020;
+    /* Fallback */
+    background: linear-gradient(135deg, var(--primary-burgundy), var(--secondary-brown));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    /* Below navbar */
+}
+
+/* Slideshow styles removed */
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    max-width: 900px;
+    padding: 2rem;
+    margin-top: 2rem;
+    /* Reduced from 5rem to lift content higher */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cross-symbol {
+    font-size: 4rem;
+    /* Slightly smaller to fit better */
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    /* Explicitly set to prevent FOUC */
+    /* Adjusted for better fit */
+    font-weight: 700;
+    color: white !important;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #eebb55 !important;
+    /* Brighter Gold */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    opacity: 1;
+    /* Ensure full opacity */
+}
+
+/* Updated Quote Grid */
+.church-names {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    /* Increased width */
+    margin: 0 auto 3rem auto;
+    flex-wrap: wrap;
+    /* Allow wrapping but prefer row */
+}
+
+.church-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff !important;
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    /* Darker background for readability */
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Lighter border */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.church-name:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    border-color: var(--primary-gold);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+    /* Reset margin */
+    width: 100%;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.quick-link-card {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: white;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 16px;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-burgundy), var(--primary-gold));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.quick-link-card:hover::before {
+    transform: scaleX(1);
+}
+
+.quick-link-card .icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.quick-link-card:hover .icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.quick-link-card h3 {
+    color: var(--primary-burgundy);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.quick-link-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(128, 0, 32, 0.15);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Grid System */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 1rem;
+}
+
+.col-4 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding: 0 1rem;
+}
+
+/* Churches Section */
+.churches-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+.church-card {
+    display: grid;
+    grid-template-columns: minmax(300px, 400px) 1fr;
+    gap: 0;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.church-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(128, 0, 32, 0.2);
+}
+
+.church-image {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    overflow: hidden;
+    position: relative;
+}
+
+.church-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.church-card:hover .church-image::after {
+    opacity: 1;
+}
+
+.church-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.church-image:hover img {
+    transform: scale(1.08);
+}
+
+.church-info {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+}
+
+.church-info h3 {
+    font-size: 2.25rem;
+    color: var(--primary-burgundy);
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.church-info .church-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.75rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.church-info .church-details {
+    background: linear-gradient(135deg, #fff9f0 0%, #fef5e7 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.1);
+}
+
+.church-info .church-details p {
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.church-info .church-details p:last-child {
+    margin-bottom: 0;
+}
+
+.church-info .church-details strong {
+    color: var(--primary-burgundy);
+    font-weight: 600;
+}
+
+/* Services Section */
+.service-card {
+    text-align: center;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    background: white;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card .service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h4 {
+    color: var(--primary-burgundy);
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.service-card .service-link {
+    color: var(--primary-gold);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.service-card .service-link:hover {
+    color: var(--primary-burgundy);
+    text-decoration: underline;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Notifications Section */
+.notifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.notification-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-gold);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.notification-card.high-priority {
+    border-left-color: var(--accent-red);
+}
+
+.notification-card.high-priority .notification-type {
+    background: var(--accent-red);
+}
+
+.notification-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.notification-type {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--primary-gold);
+    color: white;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+.notification-type.announcement {
+    background: var(--accent-blue);
+}
+
+.notification-type.event {
+    background: var(--accent-green);
+}
+
+.notification-type.urgent {
+    background: var(--accent-red);
+}
+
+.notification-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.notification-type-badge {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    background: #6B7280;
+    /* Default fallback */
+}
+
+.notification-type-badge.event {
+    background: linear-gradient(135deg, #10B981, #059669);
+}
+
+.notification-type-badge.announcement {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+}
+
+.notification-type-badge.general {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+}
+
+.notification-card h4 {
+    color: var(--primary-burgundy);
+    margin-bottom: 0.5rem;
+}
+
+.notification-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 4rem 0;
+}
+
+.cta-section h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Loading State */
+.loading-container {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.loading-container p {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-section {
+        height: 550px;
+    }
+
+    .desktop-only-decor {
+        display: none !important;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .church-card {
+        grid-template-columns: 1fr;
+    }
+
+    .church-image {
+        height: 280px;
+    }
+
+    .col-3,
+    .col-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 500px;
+    }
+
+    .hero-title {
+        font-size: 2.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.35rem;
+    }
+
+    .cross-symbol {
+        font-size: 4rem;
+    }
+
+    .church-names {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    /* Remove grid specifics */
+
+
+    .quick-link-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .notifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .col-3,
+    .col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 450px;
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .cross-symbol {
+        font-size: 3.5rem;
+    }
+
+    .hero-text {
+        padding: 1.5rem;
+    }
+
+    .church-name {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .quick-link-card {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .quick-link-card .icon {
+        font-size: 3rem;
+    }
+
+    .church-info {
+        padding: 1.75rem;
+    }
+
+    .church-info h3 {
+        font-size: 1.75rem;
+    }
+}

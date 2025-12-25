@@ -1,0 +1,300 @@
+/* Admin Mass Timings Page Styles */
+
+.mass-timings-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+}
+
+.page-title {
+    font-size: 2.2rem;
+    color: #800020;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+.back-btn {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: white;
+    color: #4b5563;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.back-btn:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #111827;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #1f2937;
+    transition: all 0.2s;
+    background-color: #f9fafb;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #800020;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.1);
+}
+
+.textarea-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #800020 0%, #a01a3c 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(128, 0, 32, 0.2);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(128, 0, 32, 0.3);
+    filter: brightness(1.1);
+}
+
+/* Calendar Button for Admin */
+.calendar-button-admin {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #1f2937;
+    background-color: #f9fafb;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.calendar-button-admin:hover {
+    border-color: #800020;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.1);
+}
+
+.calendar-button-admin:focus {
+    outline: none;
+    border-color: #800020;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.1);
+}
+
+/* List Styles */
+.timings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.timing-item {
+    padding: 1.25rem;
+    border: 1px solid #f3f4f6;
+    border-radius: 12px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    border-left: 4px solid #e5e7eb;
+}
+
+.timing-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-color: #d1d5db;
+    /* fallback hover border */
+}
+
+/* Variant Styling */
+.timing-item.regular {
+    border-left-color: #10b981;
+    background: linear-gradient(to right, #f0fdf9, white 50%);
+}
+
+.timing-item.special {
+    border-left-color: #9333ea;
+    background: linear-gradient(to right, #faf5ff, white 50%);
+}
+
+.timing-item.festival {
+    border-left-color: #d97706;
+    background: linear-gradient(to right, #fffbeb, white 50%);
+}
+
+.time-display {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.time-text {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #1f2937;
+    font-feature-settings: "tnum";
+}
+
+.type-badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 99px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+}
+
+.type-badge.regular {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.type-badge.special {
+    background: #f3e8ff;
+    color: #7e22ce;
+}
+
+.type-badge.festival {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.date-badge {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.context-text {
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+.location-text {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.delete-btn {
+    padding: 0.6rem;
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    opacity: 0.8;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+    background: #fecaca;
+    transform: scale(1.05);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #9ca3af;
+    font-style: italic;
+}
+
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}

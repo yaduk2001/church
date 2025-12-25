@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "start:backend": "cd backend && npm run dev",
+        "start:frontend": "cd frontend-angular && npm start",
+        "install:all": "cd backend && npm install && cd ../frontend-angular && npm install",
+        "build:all": "cd backend && npm run build && cd ../frontend-angular && npm run build"
+    }
+}

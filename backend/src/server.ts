@@ -150,8 +150,8 @@ const startServer = async (): Promise<void> => {
     await connectToMongoDB();
 
     app.listen(PORT, () => {
-        console.log(`🚀 Server running on http://localhost:${PORT}`);
-        console.log(`📡 API available at http://localhost:${PORT}/api`);
+        console.log(`🚀 Server is listening on port ${PORT}`);
+        console.log(`📡 API is active and ready`);
     });
 };
 
